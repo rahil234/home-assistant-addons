@@ -6,11 +6,37 @@
   "startup": "services",
   "boot": "auto",
   "host_network": true,
+  "ingress": true,
+  "ingress_port": 4873,
+  "panel_icon": "mdi:package-variant",
+  "panel_title": "Verdaccio",
+  "arch": ["aarch64", "amd64"],
+  "map": ["config:rw", "share:rw"],
   "ports": {
     "4873/tcp": 4873
   },
-  "arch": ["aarch64", "amd64"],
-  "map": ["config:rw", "share:rw"],
-  "options": {},
-  "schema": {}
+  "options": {
+    "storage_path": "/share/verdaccio/storage",
+    "htpasswd_file": "/share/verdaccio/htpasswd",
+    "max_users": 100,
+    "uplink_url": "https://registry.npmjs.org/",
+    "custom_packages": "",
+    "web_title": "Verdaccio",
+    "web_url_prefix": "https://registry.rahil.homes",
+    "server_base": "https://registry.rahil.homes",
+    "log_level": "http",
+    "log_format": "pretty"
+  },
+  "schema": {
+    "storage_path": "str",
+    "htpasswd_file": "str",
+    "max_users": "int",
+    "uplink_url": "str",
+    "custom_packages": "str?",
+    "web_title": "str",
+    "web_url_prefix": "str",
+    "server_base": "str",
+    "log_level": "str",
+    "log_format": "str"
+  }
 }

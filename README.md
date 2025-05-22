@@ -1,2 +1,2 @@
 # Home Assistant Addons
-My Homeassistant addons
+My Home Assistant addons

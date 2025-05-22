@@ -1,6 +1,6 @@
 {
   "name": "Verdaccio",
-  "version": "1.0",
+  "version": "1.1",
   "slug": "verdaccio",
   "description": "Private NPM registry using Verdaccio",
   "startup": "services",

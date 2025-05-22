@@ -1,2 +1,2 @@
-# hassio-addons
-My homeassistant addons
+# Home Assistant Addons
+My Homeassistant addons

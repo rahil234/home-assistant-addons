@@ -1,0 +1,16 @@
+{
+  "name": "Verdaccio",
+  "version": "1.0",
+  "slug": "verdaccio",
+  "description": "Private NPM registry using Verdaccio",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "ports": {
+    "4873/tcp": 4873
+  },
+  "arch": ["aarch64", "amd64"],
+  "map": ["config:rw", "share:rw"],
+  "options": {},
+  "schema": {}
+}

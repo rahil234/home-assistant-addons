@@ -1,0 +1,36 @@
+storage: /share/verdaccio/storage
+
+auth:
+  htpasswd:
+    file: /share/verdaccio/htpasswd
+    max_users: 100
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+
+packages:
+  "@*/*":
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+
+  "**":
+    access: $all
+    publish: $authenticated
+    proxy: npmjs
+
+middlewares:
+  audit:
+    enabled: true
+
+log:
+  - { type: stdout, format: pretty, level: http }
+
+web:
+  enable: true
+  title: Verdaccio
+  url_prefix: https://registry.rahil.homes
+
+server:
+  base: https://registry.rahil.homes
